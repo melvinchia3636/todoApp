@@ -1,4 +1,5 @@
 import React from 'react';
+import cover from '../../public/assets/images/login-cover.jpg';
 
 function Login() {
   return (
@@ -71,7 +72,23 @@ function Login() {
           </button>
         </div>
       </div>
-      <div className="w-1/2 h-full flex flex-col justify-center items-center bg-custom-500" />
+      <div className="w-1/2 h-full flex flex-col justify-center items-center relative">
+        <img
+          src={cover.src}
+          alt="cover"
+          className="w-full h-full object-cover"
+        />
+        <div className="w-full h-full absolute top-0 left-0 bg-custom-500 opacity-10" />
+        <div className="w-full h-full absolute top-0 left-0 bg-neutral opacity-50" />
+        <p className="text-primary-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl w-full px-16 isolate tracking-wide">
+          <span className="text-[10rem] mgc_quote_left_fill absolute top-0 -translate-y-1/2 left-4 text-primary-content opacity-20 z-[-1]" />
+          The trouble is that you think you have time.
+          <br />
+          <span className="text-2xl font-medium w-full flex justify-end mt-4">
+            - Jack Kornfield
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
